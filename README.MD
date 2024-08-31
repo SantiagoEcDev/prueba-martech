@@ -9,7 +9,6 @@ Este proyecto consiste en el desarrollo de una aplicación web completa utilizan
 3. [Backend](#backend)
 4. [Instalación](#instalación)
 5. [Uso](#uso)
-6. [Contribuciones](#contribuciones)
 
 
 ## Requisitos del Proyecto 🗒
