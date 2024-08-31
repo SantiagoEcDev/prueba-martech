@@ -1,0 +1,55 @@
+.profile__container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.personal__info{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    width: 610px;
+    height: 552px;
+    border-radius: 12px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+form label{
+    font-weight: 500;
+    margin-top: 20px;
+}
+form input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid rgb(179, 178, 178);
+    padding: 12px;
+}
+form textarea{
+    width: 570px;
+    height: 124px;
+    border-radius: 10px;
+    border: 1px solid rgb(179, 178, 178);   
+    resize: none;
+}
+form button{
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    width: 150px;
+    height: 42px;
+    margin-top: 20px;
+    align-self: flex-end;
+}
+.update__password{
+    padding: 20px;
+    width: 360px;
+    height: 552px;
+    border: 1px solid rgb(214, 214, 214);
+    border-radius: 12px;
+}
