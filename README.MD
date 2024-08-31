@@ -1,8 +1,8 @@
-# Prueba Martech
+# Prueba Martech 👨🏻‍💻
 
 Este proyecto consiste en el desarrollo de una aplicación web completa utilizando tecnologías frontend y backend. El objetivo es implementar una interfaz de usuario intuitiva y una API backend robusta que permita la gestión de usuarios y un módulo adicional con funcionalidades CRUD y carga masiva de datos.
 
-## Contenidos
+## Contenido ✨
 
 1. [Requisitos del Proyecto](#requisitos-del-proyecto)
 2. [Frontend](#frontend)
@@ -10,11 +10,11 @@ Este proyecto consiste en el desarrollo de una aplicación web completa utilizan
 4. [Instalación](#instalación)
 5. [Uso](#uso)
 6. [Contribuciones](#contribuciones)
-7. [Licencia](#licencia)
 
-## Requisitos del Proyecto
 
-### Frontend
+## Requisitos del Proyecto 🗒
+
+### Frontend 🕹
 
 - **Página de Registro**: Permite a los usuarios registrarse proporcionando un nombre de usuario, correo electrónico y contraseña.
 - **Página de Inicio de Sesión**: Permite a los usuarios iniciar sesión utilizando su correo electrónico y contraseña.
@@ -27,27 +27,26 @@ Este proyecto consiste en el desarrollo de una aplicación web completa utilizan
     - **Inserción en la base de datos**: Los datos validados deben ser insertados en la base de datos del módulo adicional (productos, servicios, etc.).
   - **Gráfica de Datos**: Visualiza datos relevantes del módulo adicional, como estadísticas de ventas, categorías más populares, o análisis de inventario.
 
-### Backend
+### Backend 🔒
 
 - **Registro de usuarios**: Guarda usuarios en la base de datos.
 - **Autenticación**: Maneja el inicio de sesión y mantiene sesiones activas.
 - **Actualización de perfil**: Permite la actualización de datos del usuario.
 - **Módulo adicional**: Implementa el CRUD para la entidad elegida, incluida la funcionalidad de carga masiva de datos mediante un archivo Excel. La API debe poder procesar el archivo Excel, realizar la validación de los datos, y realizar la inserción en la base de datos.
 
-## Instalación
+## Instalación ⚙
 
 1. Clona este repositorio en tu máquina local.
 2. Navega a la carpeta frontend en tu terminal usando el comando "cd frontend". 
 3. Dentro de la carpeta frontend ejecuta el comando "yarn" para la instalación de dependencias.
 4. Navega a la carpeta server desde tu ruta raíz utilizando el comando "cd server".
 5. Dentro de la carpeta server ejecuta `npm install` para instalar las dependencias.
+6. Después de instalar las dependencias ejecuta el servidor utilizando el comando "npm start".
 
-## Uso
+## Uso 🥁
+1. Teniendo las dos carpetas ejecutadas en la terminal, navega a `http://localhost:5173` para acceder a la aplicación.
 
-1. Ejecuta `npm start` para iniciar el servidor de desarrollo tanto para el frontend como para el backend.
-2. Abre tu navegador y navega a `http://localhost:5173` para acceder a la aplicación.
-
-## Sustentación
+## Sustentación 💁🏻‍♂️
 
 En este proyecto se tomaron varias decisiones técnicas y de diseño para asegurar un desarrollo eficiente y una experiencia de usuario fluida:
 
