@@ -14,7 +14,8 @@ export const SigninForm = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    axios.post("http://localhost:8081/login", values)
+    axios
+      .post("http://localhost:8081/login", values)
       .then((res) => {
         console.log(res.data); // Para depuración
         if (res.data.Status === "Success") {
@@ -31,10 +32,10 @@ export const SigninForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="signin__form">
-      <h1 className="signin__form--title">Sign In</h1>
-      <p className="signin__form--subtitle">Access your account</p>
+      <h1 className="signin__form--title">Iniciar Sesión</h1>
+      <p className="signin__form--subtitle">Accede a tu cuenta</p>
 
-      <label htmlFor="email">Email</label>
+      <label htmlFor="email">Correo</label>
       <input
         onChange={(e) => setValues({ ...values, email: e.target.value })}
         type="email"
@@ -43,7 +44,7 @@ export const SigninForm = () => {
         required
       />
 
-      <label htmlFor="password">Password</label>
+      <label htmlFor="password">Contraseña</label>
       <input
         onChange={(e) => setValues({ ...values, password: e.target.value })}
         type="password"
@@ -52,10 +53,10 @@ export const SigninForm = () => {
         required
       />
 
-      <button type="submit">Sign In</button>
+      <button type="submit">Iniciar sesión</button>
 
       <p className="signin__form--text">
-        Don't have an account? <Link to="/register">Sign Up</Link>
+        ¿No tienes una cuenta? <Link to="/register">Registrarse</Link>
       </p>
     </form>
   );

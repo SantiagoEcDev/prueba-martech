@@ -29,7 +29,7 @@ const db = mysql.createConnection({
   database: "prueba",
 });
 
-const upload = multer({ dest: "uploads/" }); // Configura multer para guardar archivos en la carpeta 'uploads'
+const upload = multer({ dest: "uploads/" }); // Configura el multer para guardar archivos en la carpeta 'uploads'
 
 const verifyUser = (req, res, next) => {
   const token = req.cookies.token;
@@ -81,11 +81,11 @@ app.post("/login", (req, res) => {
           if (err) return res.json({ Error: "Password compare error" });
           if (response) {
             const name = data[0].name;
-            const userId = data[0].id; // Get user ID from database
+            const userId = data[0].id; // Obtiene el ID de user
             const token = jwt.sign({ name, userId }, "jwt-secret-key", {
               expiresIn: "1d",
             });
-            res.cookie("token", token, { httpOnly: true, secure: false }); // Change to secure: true in production
+            res.cookie("token", token, { httpOnly: true, secure: false }); 
             return res.json({ Status: "Success" });
           } else {
             return res.json({ Error: "Password not matched" });
@@ -100,7 +100,7 @@ app.post("/login", (req, res) => {
 
 // Obtener cursos del usuario
 app.get("/courses", verifyUser, (req, res) => {
-  const userId = req.userId; // Use userId from the request
+  const userId = req.userId; // Use el id del request
   const sql = "SELECT * FROM courses WHERE created_by = ?";
   db.query(sql, [userId], (err, results) => {
     if (err) {
@@ -130,6 +130,7 @@ app.post("/add-course", verifyUser, (req, res) => {
     res.json({ message: "Curso creado exitosamente" });
   });
 });
+
 // Ruta para cargar cursos desde un archivo Excel
 app.post("/upload-courses", upload.single("file"), verifyUser, (req, res) => {
   if (!req.file) {
@@ -301,7 +302,7 @@ app.put("/change-password", verifyUser, async (req, res) => {
   }
 });
 
-// Backend: app.put("/courses/:id", verifyUser, async (req, res) => {
+
   app.put("/courses/:id", verifyUser, async (req, res) => {
     const courseId = req.params.id;
     const { name, faculty, description } = req.body;
@@ -319,7 +320,7 @@ app.put("/change-password", verifyUser, async (req, res) => {
 
   app.delete('/courses/:id', verifyUser, async (req, res) => {
     const { id } = req.params;
-    const userId = req.userId; // Asegúrate de que el usuario esté autenticado y autorizado
+    const userId = req.userId;
   
     try {
       const result = await db.query('DELETE FROM courses WHERE id = ? AND created_by = ?', [id, userId]);
